@@ -177,9 +177,9 @@ int main (int argc, char** argv)
             imu_msg.orientation.x = quaternion[1];
             imu_msg.orientation.y = quaternion[2];
             imu_msg.orientation.z = quaternion[3];
-            imu_msg.linear_acceleration.x = (float)stcAcc.a[0]/32768*16.0;
-            imu_msg.linear_acceleration.y = (float)stcAcc.a[1]/32768*16.0;
-            imu_msg.linear_acceleration.z = (float)stcAcc.a[2]/32768*16.0;
+            imu_msg.linear_acceleration.x = (float)stcAcc.a[0]/32768*16.0*9.8;
+            imu_msg.linear_acceleration.y = (float)stcAcc.a[1]/32768*16.0*9.8;
+            imu_msg.linear_acceleration.z = (float)stcAcc.a[2]/32768*16.0*9.8;
             imu_msg.angular_velocity.x = ((float)stcGyro.w[0]/32768*2000)/180.0*Pi;
             imu_msg.angular_velocity.y = ((float)stcGyro.w[1]/32768*2000)/180.0*Pi;
             imu_msg.angular_velocity.z = ((float)stcGyro.w[2]/32768*2000)/180.0*Pi;
